@@ -1,0 +1,46 @@
+.Navbar{
+    width: 8%;
+    height: auto;
+    padding: 1%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    height: 100vh;
+    z-index: 5000;
+    transition: all 0.5s ease-in-out;
+}
+
+.navParent{
+    
+}
+
+.nav{
+    row-gap: 20px;
+    /* column-gap: 45px; */
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav a p{
+    font-size: 12px;
+}
+
+@media (max-width: 950px){
+    .Navbar{
+        width: 230px;
+        border-right: 1px solid var(--primaryColor);
+    }
+    .navParent{
+
+    }
+    .nav{
+        /* align-items: center;
+        justify-content: center;*/
+    }
+
+}

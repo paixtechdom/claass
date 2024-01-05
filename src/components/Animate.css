@@ -1,0 +1,139 @@
+
+.loading h4{
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    animation: bgfade 3s infinite;
+}
+.loading p{
+    height: 15px;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.1);
+    animation: bgfade 3s infinite;
+}
+.loading button{
+    animation: bgfade 3s infinite;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 25px;
+}
+.slideOver{
+    top: -10%;
+    height: 100px;
+    width: 20px;
+    transform: rotateZ(30deg) ;
+    transition: all 0.3s;
+    animation: slideOver 2s infinite;
+    left: -25%;
+}
+.slideOver2{
+    top: -10%;
+    height: 100px;
+    width: 20px;
+    transform: rotateZ(30deg) ;
+    transition: all 0.3s;
+    animation: slideOver2 2s infinite;
+    left: 0%;
+}
+
+.slideIn{
+    animation: slideIn 0.5s ease-in-out;
+    bottom: 0%;
+}
+.slideOut{
+    animation: slideOut 0.5s ease-in-out;
+    bottom: -120%;
+    
+}
+.slideOutNav{
+    animation: slideOutNav 0.5s ease-in-out;
+    right: 100%;
+}
+.slideInNav{
+    animation: slideInNav 0.5s ease-in-out;
+    right: 0%;
+}
+
+@keyframes slideInNav {
+    from{
+        right: -100%;
+    }
+    to{
+        right: 0%;
+    }
+}
+
+@keyframes slideOutNav {
+    from{
+        right: 0%;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+@keyframes slideIn {
+    from{
+        bottom: -120%;
+    }
+    to{
+        bottom: 0%;
+    }
+}
+
+@keyframes slideOut {
+    from{
+        bottom: -0%;
+    }
+    to{
+        bottom: -120%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes bgfade{
+    0%{
+        background-color: rgba(0, 0, 0, 0.1);
+    }  
+    50%{
+        background-color: rgba(0, 0, 0, 0.4);
+
+    }  
+    100%{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes slideOver2 {
+    from{
+        left: 0%;
+    }    
+    to{
+        left: 125%;
+    }
+}
+
+@keyframes slideOver {
+    from{
+        left: -25%;
+    }    
+    to{
+        left: 100%;
+    }
+}
