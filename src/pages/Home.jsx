@@ -238,7 +238,7 @@ export const Home  = () => {
                         <Link to='/gallery'> See All <i className="bi bi-arrow-right"></i></Link>
                       </div>
 
-                      <div className={`w-full gap-3 mt-5 ${smallScreen ? 'flex flex-col' : mediumScreen ? 'grid grid-cols-3' : 'grid grid-cols-5'  }`}>
+                      <div className={`w-full gap-3 mt-5 ${smallScreen ? 'flex flex-col' : mediumScreen ? 'grid grid-cols-3' : 'grid grid-cols-5 p-4'  }`}>
                       {
                          isLoadingImages ? 
                          <div className="bg-gray-100 rounded-b-xl flex flex-col w-full p-3 relative overflow-hidden">                    
