@@ -85,7 +85,7 @@ export const Home  = () => {
                     </div>
                  
                 </div>
-                <div className="flex absolute bottom-0 w-full items-center justify-center z-50">
+                <div className="flex absolute bottom-5 w-full items-center justify-center z-50">
                     <div className="flex gap-4 p-4">
                       {
                         carouselItems.map((item, key) => (
@@ -130,7 +130,7 @@ export const Home  = () => {
                           </div> 
                           </div>
                       : 
-                          <div className="flex flex-col w-full gap-2">
+                          <div className="flex flex-col w-full gap-3 p-3">
                               <div className="flex justify-between w-full items-center">
                                 <h4 className="font-bold">{latestSermon.title}</h4>
                                 <p className="smaller">{latestSermon.date}</p>
@@ -138,7 +138,7 @@ export const Home  = () => {
 
                               <div className="flex justify-between w-full items-center">
                               <p className="text-gray-800 small">By: {latestSermon.preacher}</p>                               
-                              <a href={latestSermon.link} className="bg-blue-900 text-white p-2 px-4 rounded-lg nderline small"> Listen</a>
+                              <a href={latestSermon.link} className="bg-blue-900 text-white p-2 px-4 rounded-lg w-[150px] text-center small"> Listen</a>
                               </div>
                               
                           </div>
@@ -148,19 +148,18 @@ export const Home  = () => {
             </div>
 
             <div className="flex my-9 py-[15vh] justify-center w-full ">
-              <div className="flex flex-col gap-[10vh] w-11/12 items-center ">
+              <div className="flex flex-col gap-[10vh] w-11/12 lg:w-10/12 xl:w-9/12 items-center ">
 
-                <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8">Our {Statements.mission.title}</h3>
+                <div className={`flex items-center gap-[50px] ${mediumScreen ? 'flex-wrap' : ''}`}>
+                      <img src={Statements.mission.img} alt="" className="w-full"/>
 
-                <div className={`flex items-center gap-5 ${mediumScreen ? 'flex-wrap' : ''}`}>
-                    <div className="flex items-center justify-center w-full ">
-                      <img src={Statements.mission.img} alt="" />
-                    </div>
                     <div className="flex flex-col gap-2 small-lg">
+                    <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8 mb-4">Our {Statements.mission.title}</h3>
+
                       {Statements.mission.texts.map((text, key) => (
                         <div key={key} className='flex gap-3 items-center'>
-                          <i className="bi bi-check-lg  shadow-xl h-fit text-2xl p-1 px-2 rounded-full"></i>
-                          <p>{text}</p>
+                          <i className="bi bi-check-lg  shadow-xl h-fit text-xl p-1 px-2 rounded-full"></i>
+                          <p className="tracking-wide leading-relaxed">{text}</p>
                         </div>
                       ))
                       }
@@ -194,13 +193,13 @@ export const Home  = () => {
                             
                              </div>
                             </div> : 
-                            <Link to={`article/${latestArticle.id}`}  className="flex flex-col w-full gap-2">
+                            <Link to={`article/${latestArticle.id}`}  className="flex flex-col w-full gap-3 p-3">
                                 <div className="flex justify-between w-full items-center">
                                   <h4 className="font-bold">{latestArticle.title}</h4>
                                   <p className="smaller">{latestArticle.date}</p>
                                 </div>
                                 <div className="flex justify-between w-full items-center">
-                                <div className="bg-blue-900 text-white p-2 px-4 rounded-lg nderline small">Read</div>
+                                <div className="bg-blue-900 text-white p-2 px-4 rounded-lg nderline small w-[150px] text-center">Read</div>
                                 </div>
                                 
                             </Link>
@@ -209,76 +208,64 @@ export const Home  = () => {
                 </div>
             </div>
             <div className="flex my-9 py-[15vh] justify-center w-full ">
-              <div className={`flex flex-col gap-[10vh] w-11/12 items-center`}>
+              <div className={`flex flex-col gap-[10vh] w-11/12 lg:w-10/12 xl:w-9/12 items-center`}>            
 
-                <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8">Our {Statements.vision.title}</h3>
-
-                <div className={`flex items-center justify-center gap-5  ${mediumScreen ? 'flex-col-reverse' : ''}`}>
+                <div className={`flex items-center justify-center gap-[50px]  ${mediumScreen ? 'flex-col-reverse' : ''}`}>
                     <div className="flex flex-col gap-2 small-lg">
+                    <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8 mb-4">Our {Statements.vision.title}</h3>
+
                       {Statements.vision.texts.map((text, key) => (
                         <div key={key} className='flex gap-3 items-center'>
-                          <i className="bi bi-check-lg  shadow-xl h-fit text-2xl p-1 px-2 rounded-full"></i>
-                          <p>{text}</p>
+                          <i className="bi bi-check-lg shadow-xl h-fit text-xl p-1 px-2 rounded-full"></i>
+                          <p className="tracking-wide leading-relaxed">{text}</p>
                         </div>
                       ))
                       }
                     </div>
-                    <div className={`flex items-center justify-center w-full`}>
-                      <img src={Statements.vision.img} alt="" />
-                    </div>
+                    <img src={Statements.vision.img} alt="" className="w-full"/>
+                   
                 </div>
               </div>
             </div>      
 
               <div className="flex my-9 py-9 justify-center w-full">
-                <div className="rounded-xl w-11/12 flex flex-col shadow-xl">
-                      <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-4 px-6">
+                <div className="w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col shadow-xl p-7">
+                  <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-4 px-6">
 
-                        <h2 className="font-bold text-xl">Gallery</h2>
-                        <Link to='/gallery'> See All <i className="bi bi-arrow-right"></i></Link>
-                      </div>
+                    <h2 className="font-bold text-xl">Gallery</h2>
+                    <Link to='/gallery'> See All <i className="bi bi-arrow-right"></i></Link>
+                  </div>
 
-                      <div className={`w-full gap-3 mt-5 ${smallScreen ? 'flex flex-col' : mediumScreen ? 'grid grid-cols-3' : 'grid grid-cols-5 p-4'  }`}>
-                      {
-                         isLoadingImages ? 
-                         <div className="bg-gray-100 rounded-b-xl flex flex-col w-full p-3 relative overflow-hidden">                    
-                         <div className="flex flex-col w-full gap-2 loading">
-                             <div className="flex gap-2 flex-col justify-between w-full items-center ">
-                             <h4 className="w-10/12 rounded-lg" style={{
-                                 height: 30+'vh'
-                             }}></h4>
-                             <p className="w-7/12 rounded-xl"></p>
-                                                     
-                             </div>                        
-                         </div>
-                         </div> : 
-                          images.length > 0 ?
+                  <div className={`w-full gap-y-9 gap-5 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 mt-[10vh]`}>
+                    {
+                        isLoadingImages ? 
+                        <div className="bg-gray-100 rounded-xl flex flex-col w-full p-3 relative overflow-hidden">                    
+                        <div className="flex flex-col w-full gap-2 loading">
+                            <div className="flex gap-2 flex-col justify-between w-full items-center ">
+                            <h4 className="w-10/12 rounded-lg" style={{
+                                height: 30+'vh'
+                            }}></h4>                                                    
+                            </div>                        
+                        </div>
+                        </div> :
+                        images.length > 0 ?
+                        images?.map((img, key) => (
 
-                          images?.map((img, key) => (
-
-                              <div key={key} className="flex flex-col border items-center rounded-t overflow-hidden shadow-lg" onClick={() => {
+                            <div key={key} className="flex flex-col items-center overflow-hidden " onClick={() => {
                                 setShowZoom(true) 
                                 setImageSource(`${dbLocation}/images/${img.name}`)
                               }}>
 
-                              <div className={`overflow-hidden  flex flex-col justify-center `} style={{
-                                  height: smallScreen ? '' :  35+'vh',
-                                  minHeight: smallScreen ? '' :  35+'vh',
-                                  maxHeight: smallScreen ? '' :  35+'vh',
-                              }}>
-                                  <img src={`${dbLocation}/images/${img.name}`} alt={img.caption.length > 0 ? img.caption : 'An image'} 
-                                  className='w-full ' />
-                      
-                              </div>
-                              {
-                                img.caption.length > 0 ? 
-                                <p className="small-lg py-3 px-2">{img?.caption}</p> : ''
-                              }
-                              </div>
-                          )) : 
-                          <p className="p-3 text-gray-500 bg-gray-100 rounded-b-xl">Empty List</p>
-                      }
-            </div>
+                                <div className={`overflow-hidden  flex flex-col justify-center`}>
+                                    <img src={`${dbLocation}/images/${img.name}`} alt={img.caption.length > 0 ? img.caption : 'An image'} 
+                                    className='w-full rounded-xl'/>
+                                </div>
+                            </div> 
+                        )) : 
+                        <p className="p-3 text-gray-500 bg-gray-100 rounded-xl">Empty List</p>
+
+                    }
+                  </div>
                 </div>
             </div>
           

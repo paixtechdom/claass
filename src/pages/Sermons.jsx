@@ -50,23 +50,23 @@ export const Sermons = () => {
     }
 
     return(
-        <div className="flex w-full justify-center items-center my-9 py-9 flex-col gap-5">
+        <div className="flex w-full justify-center items-center flex-col gap-5">
             <Helmet>
                 <title>Sermons - CLASS</title>
             </Helmet>
-            <div className="bg-blue-900 w-full text-white text-center p-4 text-2xl">
-                CLASS Sermons
+            <div className="bg-blue-900 w-full text-white py-[10vh] h-[40vh] flex items-end justify-center font-bold text-2xl">
+                Our Sermons
             </div>
-            <div className="w-11/12 flex justify-center">
-                <div className="bg-gray-50 border w-11/12 flex gap-3 rounded-xl ">
-                    <input type="text" placeholder="Search Title or Preacher" className="bg-transparent border-r w-full p-2 px-3 outline-none"
+            <div className="w-11/12 lg:w-10/12 xl:w-9/12 flex justify-center mt-9">
+                <div className="bg-white shadow-xl w-11/12 lg:w-10/12 xl:w-9/12 flex gap-3 rounded-full">
+                    <input type="text" placeholder="Search Title or Preacher" className="bg-transparent border-r w-full p-3 px-6 outline-none"
                     value={searchInput}
                     onChange={handleSearch}
                     />
-                    <i className="bi bi-search p-2 cursor-pointer"></i>
+                    <i className="bi bi-search p-3 pr-5 cursor-pointer"></i>
                 </div>
             </div>
-            <div className="w-11/12 flex flex-col gap-4">
+            <div className="w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col lg:grid lg:grid-cols-2 gap-9 mt-9 mb-[15vh]">
                 {
                     isLoading ? 
                     <>
@@ -102,15 +102,15 @@ export const Sermons = () => {
                     : 
                     sermonOutput.length > 0 ? 
                     sermonOutput?.map((sermon, key) => (
-                        <div key={key} className="bg-gray-100 rounded-xl flex flex-col w-full p-3">
+                        <div key={key} className="bg-gray-100 rounded-xl flex flex-col w-full p-5 py-6 shadow-lg">
                             <div className="flex flex-col w-full gap-2">
                                 <div className="flex justify-between w-full items-center">
                                 <h4 className="font-bold"> {sermon.title}</h4>
-                                <p className="smaller">{sermon.date}</p>
+                                <p className="">{sermon.date}</p>
                                 </div>
                                 <div className="flex justify-between w-full items-center">
                                 <p className="text-gray-800 small">By: {sermon.preacher}</p>                               
-                                <a href={`${sermon.link}`} className="bg-blue-900 text-white p-2 px-4 rounded-lg nderline small"> Listen</a>
+                                <a href={`${sermon.link}`} className="bg-blue-900 text-white p-2 px-4 rounded-lg small w-[150px] text-center"> Listen</a>
                                 </div>
                                 
                             </div>

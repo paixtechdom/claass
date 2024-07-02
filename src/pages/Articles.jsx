@@ -49,23 +49,24 @@ export const Articles = () => {
     }
 
     return(
-        <div className="flex w-full justify-center items-center my-9 pt-9 flex-col gap-5">
+        <div className="flex w-full justify-center items-center flex-col gap-5">
         <Helmet>
             <title>Articles - Class</title>
         </Helmet>
-        <div className="bg-blue-900 w-full text-white text-center p-4 text-2xl">
-            CLASS Articles
+        <div className="bg-blue-900 w-full text-white py-[10vh] h-[40vh] flex items-end justify-center font-bold text-2xl">
+                Explore life changing articles
         </div>
-        <div className="w-11/12 flex justify-center">
-            <div className="bg-gray-50 border w-11/12 flex gap-3 rounded-xl ">
-                <input type="text" placeholder="Search with title" className="bg-transparent border-r w-full p-2 px-3 outline-none"
+
+        <div className="w-11/12 lg:w-10/12 xl:w-9/12 flex justify-center mt-9">
+            <div className="bg-white shadow-xl w-11/12 lg:w-10/12 xl:w-9/12 flex gap-3 rounded-full">
+                <input type="text" placeholder="Search articles" className="bg-transparent border-r w-full p-3 px-6 outline-none"
                 value={searchInput}
                 onChange={handleSearch}
                 />
-                <i className="bi bi-search p-2 cursor-pointer"></i>
+                <i className="bi bi-search p-3 pr-5 cursor-pointer"></i>
             </div>
         </div>
-        <div className="w-11/12 flex flex-col gap-4">
+            <div className="w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col lg:grid lg:grid-cols-2 gap-9 mt-9 mb-[15vh]">
             {
                 isLoading ? 
                 <>
@@ -101,15 +102,15 @@ export const Articles = () => {
                 : 
                 articleOutput.length > 0 ?
                 articleOutput?.map((article, key) => (
-                    <Link to={`/article/${article.id}`} key={key} className="bg-gray-100 rounded-xl flex flex-col w-full p-3">
-                        <div className="flex flex-col w-full gap-2">
+                    <Link to={`/article/${article.id}`} key={key} className="bg-gray-100 rounded-xl flex flex-col w-full p-5 py-6 shadow-lg">
+                        <div className="flex flex-col w-full gap-4">
                             <div className="flex justify-between w-full items-center">
                             <h4 className="font-bold">{article.title}</h4>
-                            <p className="smaller">{article.date}</p>
+                            <p className="">{article.date}</p>
                                                    
                             </div>
 
-                            <div className="bg-blue-900 text-white p-2 px-4 rounded-lg nderline small w-fit">Read</div>
+                            <div className="bg-blue-900 text-white p-2 px-4 rounded-lg  small w-[150px] text-center">Read Article</div>
                             
                         </div>
                     </Link> 

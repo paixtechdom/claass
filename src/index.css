@@ -87,18 +87,18 @@ a{
     opacity: 0.5;
 }
 .small{
-    font-size: 12px;
+    font-size: 15px;
 }
 .small-lg{
     font-size: 15px;
 }
 .smaller{
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .homeHero{
-    max-height: 80vh;
-    min-height: 80vh;
+    max-height: 90vh;
+    min-height: 90vh;
 }
 .hero1{
     background-image: url('./assets/img/1 (1).jpeg');
