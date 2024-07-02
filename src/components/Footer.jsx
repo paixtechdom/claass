@@ -49,9 +49,9 @@ export const Footer = () => {
 
         </div>
        
-        <div className="flex items-center justify-center w-full bg-blue-900 pt-4 text-white flex-col">
-            <div className="flex flex-col w-11/12 gap-2">
-                <h3 className="text-2xl border-b">Quick Links</h3>
+        <div className="flex items-center justify-center w-full bg-blue-900 pt-[10vh] text-white flex-col">
+            <div className="flex flex-col w-11/12 lg:w-10/12 gap-2">
+                <h3 className="text-2xl border-b mb-9">Quick Links</h3>
                 <div className="flex flex-col gap-3 px-5">
 
                     {

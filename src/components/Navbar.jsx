@@ -36,7 +36,7 @@ export const Navbar = () =>{
 
     return(
         <div className={`fixed top-0 shadow-xl w-full transition-all duration-300 z-40 bg-white flex items-center justify-center `}>
-            <div className="flex justify-between items-center w-11/12 p-2 py-5">
+            <div className="flex justify-between items-center w-11/12 lg:w-10/12 p-2 py-5">
                 <Link to={'/'} className={`logo w-5/12 transition-all duration-300 z-40 text-black `}>
                     <h2 className='font-bold text-xl'>CLASS</h2>
                     {/* <img src={Logo} alt="Logo" className={`
@@ -52,7 +52,7 @@ export const Navbar = () =>{
                         <div className={`flex  ${mediumScreen ? 'flex-col w-11/12 ' : ' '  } gap-5`}>
                             {
                                 Links.map((link, key) => (
-                                    <Link to={`/${link.link.toLowerCase()}`} key={key} className={`${currentNav == key ? 'font-bold border-b' : ''}`} onClick={() => setCurrentNav(key)}>
+                                    <Link to={`/${link.link.toLowerCase()}`} key={key} className={`${currentNav == key ? 'font-bold border-b border-gray-900' : ''}`} onClick={() => setCurrentNav(key)}>
                                         {link.name}
                                     </Link>
                                 ))

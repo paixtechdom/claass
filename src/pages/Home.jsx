@@ -105,14 +105,14 @@ export const Home  = () => {
             </div>
 
             <div className="flex my-9 pt-9 justify-center w-full">
-                <div className="rounded-xl w-11/12 flex flex-col shadow-xl">
-                      <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-3">
+                <div className="rounded-xl w-11/12 lg:w-6/12 flex flex-col shadow-xl">
+                      <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-4 px-6">
 
                         <h2 className="font-bold text-xl">Latest sermon</h2>
                         <Link to='/sermons'> See All <i className="bi bi-arrow-right"></i></Link>
                       </div>
 
-                      <div className="flex flex-col w-full p-3">
+                      <div className="flex flex-col w-full p-4 px-6">
                         {
                           isLoadingSermon ? 
                           <div className="bg-gray-100 rounded-xl flex flex-col w-full p-3 relative overflow-hidden">
@@ -147,8 +147,8 @@ export const Home  = () => {
                 </div>
             </div>
 
-            <div className="flex my-9 py-9 justify-center w-full ">
-              <div className="flex flex-col gap-5 w-11/12 items-center ">
+            <div className="flex my-9 py-[15vh] justify-center w-full ">
+              <div className="flex flex-col gap-[10vh] w-11/12 items-center ">
 
                 <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8">Our {Statements.mission.title}</h3>
 
@@ -170,14 +170,14 @@ export const Home  = () => {
             </div>     
             
               <div className="flex my-9 py-9 justify-center w-full">
-                <div className="rounded-xl w-11/12 flex flex-col shadow-xl">
-                      <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-3">
+                <div className="rounded-xl w-11/12 lg:w-6/12 flex flex-col shadow-xl">
+                      <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-4 px-6">
 
                         <h2 className="font-bold text-xl">Latest article</h2>
                         <Link to='/articles'> See All <i className="bi bi-arrow-right"></i></Link>
                       </div>
 
-                      <div className="flex flex-col w-full p-3">
+                      <div className="flex flex-col w-full p-4 px-6">
                         {
                           isLoadingArticle ? 
                             <div className="bg-gray-100 rounded-xl flex flex-col w-full p-3 relative overflow-hidden">
@@ -208,8 +208,8 @@ export const Home  = () => {
                       </div>
                 </div>
             </div>
-            <div className="flex my-9 py-9 justify-center w-full ">
-              <div className={`flex flex-col gap-5 w-11/12 items-center`}>
+            <div className="flex my-9 py-[15vh] justify-center w-full ">
+              <div className={`flex flex-col gap-[10vh] w-11/12 items-center`}>
 
                 <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8">Our {Statements.vision.title}</h3>
 
@@ -232,7 +232,7 @@ export const Home  = () => {
 
               <div className="flex my-9 py-9 justify-center w-full">
                 <div className="rounded-xl w-11/12 flex flex-col shadow-xl">
-                      <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-3">
+                      <div className="flex justify-between items-center w-full bg-blue-900 rounded-t-xl text-white p-4 px-6">
 
                         <h2 className="font-bold text-xl">Gallery</h2>
                         <Link to='/gallery'> See All <i className="bi bi-arrow-right"></i></Link>
