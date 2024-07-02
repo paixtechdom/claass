@@ -1,9 +1,5 @@
-import img1 from './img/1 (1).jpeg'
-import img3 from './img/1 (2).jpg'
-import img4 from './img/1 (7).jpeg'
-import img7 from './img/1 (4).jpeg'
-import img8 from './img/1 (4).jpg'
-import img2 from './img/1 (5).jpeg'
+import img7 from './img/mission.jpg'
+import img2 from './img/vision.jpg'
 
 
 const Links = [

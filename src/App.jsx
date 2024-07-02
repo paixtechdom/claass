@@ -24,8 +24,8 @@ const Layout = () =>{
   const [ showZoom, setShowZoom ] = useState(false)
   const [ imageSource, setImageSource ] = useState('')
   
-  const  dbLocation = 'http://localhost:80/classAPI'
-  // const  dbLocation = 'https://christlibertyassembly.org.ng/classAPI'
+  // const  dbLocation = 'http://localhost:80/classAPI'
+  const  dbLocation = 'https://christlibertyassembly.org.ng/classAPI'
   
   
   document.querySelectorAll('a').forEach((a) =>{
