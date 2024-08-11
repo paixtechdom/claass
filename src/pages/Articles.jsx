@@ -34,7 +34,7 @@ export const Articles = () => {
             })
             
         } catch (error) {
-            
+            console.log(error)   
         }
     }
 

@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async"
 
 
 const Gallery = () => {
-    const { dbLocation, smallScreen, mediumScreen, setShowZoom, setImageSource, setCurrentNav } = useContext(AppContext)
+    const { dbLocation, setShowZoom, setImageSource, setCurrentNav } = useContext(AppContext)
     const [ images, setImages ] = useState([])
     const [ isLoadingImages, setIsLoadingImages ] = useState(true)
 

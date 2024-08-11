@@ -33,7 +33,7 @@ export const Sermons = () => {
             })
             
         } catch (error) {
-            
+            console.log(error)   
         }
     }
 
@@ -109,8 +109,8 @@ export const Sermons = () => {
                                 <p className="">{sermon.date}</p>
                                 </div>
                                 <div className="flex justify-between w-full items-center">
-                                <p className="text-gray-800 small">By: {sermon.preacher}</p>                               
-                                <a href={`${sermon.link}`} className="bg-blue-900 text-white p-2 px-4 rounded-lg small w-[150px] text-center"> Listen</a>
+                                <p className="text-gray-800 text-sm">By: {sermon.preacher}</p>                               
+                                <a href={`${sermon.link}`} className="bg-blue-900 text-white p-2 px-4 rounded-lg text-sm w-[150px] text-center"> Listen</a>
                                 </div>
                                 
                             </div>

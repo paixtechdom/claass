@@ -1,11 +1,9 @@
 import { useState, createContext, useEffect } from 'react'
 import { createBrowserRouter, RouterProvider, Outlet, Link } from 'react-router-dom';
-import './App.css'
 import { Home } from './pages/Home'
 import { Navbar } from './components/Navbar'
 import './index.css'
-import { Helmet, HelmetProvider} from 'react-helmet-async'
-// import { Alert } from './Components/Alert'
+import { HelmetProvider} from 'react-helmet-async'
 import { Footer } from './components/Footer';
 import { Sermons } from './pages/Sermons';
 import { Articles } from './pages/Articles';
@@ -18,8 +16,6 @@ export const AppContext = createContext()
 
 const Layout = () =>{
   const [ currentNav, setCurrentNav ] = useState(0)  
-  const [ smallScreen, setSmallScreen ] = useState(false)  
-  const [ mediumScreen, setMediumScreen  ] = useState(false)
   const [ showNav, setShowNav ] = useState(false)  
   const [ showZoom, setShowZoom ] = useState(false)
   const [ imageSource, setImageSource ] = useState('')
@@ -35,57 +31,22 @@ const Layout = () =>{
     })
   })
 
-  useEffect(() =>{
-    setInterval(() => {
-      const mediaQuery = window.matchMedia('(max-width:950px)');
-      setMediumScreen(mediaQuery.matches);
-      
-      const handleMediaQueryChange = (event) =>{
-        setMediumScreen(event.matches)
-      }
-      mediaQuery.addEventListener('change', handleMediaQueryChange)
-      
-      
-      return () =>{
-        mediaQuery.removeEventListener('change', handleMediaQueryChange)
-      }
-    }, 200);
-
-    setInterval(() => {
-
-      const mediaQuery = window.matchMedia('(max-width:500px)');
-      setSmallScreen(mediaQuery.matches);
-      
-      const handleMediaQueryChange = (event) =>{
-        setSmallScreen(event.matches)
-      }
-      mediaQuery.addEventListener('change', handleMediaQueryChange)
-      
-      
-      return () =>{
-        mediaQuery.removeEventListener('change', handleMediaQueryChange)
-      }
-    }, 200);
-    
-  }, [])
   
 
   return(
     <div className='app '>
-      <AppContext.Provider value={{currentNav, setCurrentNav, smallScreen, mediumScreen , showZoom, setShowZoom, imageSource, setImageSource, showNav, setShowNav, dbLocation }}>
+      <AppContext.Provider value={{currentNav, setCurrentNav, showZoom, setShowZoom, imageSource, setImageSource, showNav, setShowNav, dbLocation }}>
 
           <HelmetProvider>
           <div className='d-flex w-full'>
-            <Navbar mediumScreen={mediumScreen} smallScreen={smallScreen} />
+            <Navbar/>
             <Outlet />
+
+            {/* toggling component for zoomed image */}
             {
               showZoom ?  
               <ZoomedImage /> : ''
             }
-            {/* {
-              showALert ? 
-              <Alert alertMessage={alertMessage} alertType={alertType} setShowAlert={setShowAlert}/> : ''
-            } */}
             <Footer />
           </div>
           </HelmetProvider>
@@ -95,6 +56,8 @@ const Layout = () =>{
   )
   
 }
+
+// app router for navigation
 
 const router = createBrowserRouter([
   {

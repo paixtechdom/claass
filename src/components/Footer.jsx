@@ -25,7 +25,7 @@ export const Footer = () => {
 
                         <div className="flex flex-col gap-4">
                             <p className="text-xl">Address</p>
-                            <p className="text-gray-800 small-lg">21, (wing A) Zone 1, Oriyanrin, Adogba Area, Monatan, Ibadan, oyo State, Nigeria.</p>
+                            <p className="text-gray-800 text-sm">21, (wing A) Zone 1, Oriyanrin, Adogba Area, Monatan, Ibadan, oyo State, Nigeria.</p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ export const Footer = () => {
        
         <section className="flex items-center justify-center w-full bg-blue-900 pt-[10vh] text-white flex-col">
             <div className="flex flex-col w-11/12 lg:w-10/12 xl:w-9/12 gap-2">
-                <h3 className="text-2xl border-b w-fit mb-6">Navigation</h3>
+                <h3 className="text-2xl border-b w-fit mb-6">Links</h3>
                 <div className="flex flex-col gap-4 px-5">
 
                     {

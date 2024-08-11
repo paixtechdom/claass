@@ -45,32 +45,6 @@
     bottom: -120%;
     
 }
-.slideOutNav{
-    animation: slideOutNav 0.5s ease-in-out;
-    right: 100%;
-}
-.slideInNav{
-    animation: slideInNav 0.5s ease-in-out;
-    right: 0%;
-}
-
-@keyframes slideInNav {
-    from{
-        right: -100%;
-    }
-    to{
-        right: 0%;
-    }
-}
-
-@keyframes slideOutNav {
-    from{
-        right: 0%;
-    }
-    to{
-        right: 100%;
-    }
-}
 
 
 

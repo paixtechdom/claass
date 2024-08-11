@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 export const Home  = () => {
-  const { mediumScreen, dbLocation, smallScreen, setShowZoom, setImageSource, setCurrentNav } = useContext(AppContext)
+  const { mediumScreen, dbLocation, setShowZoom, setImageSource, setCurrentNav } = useContext(AppContext)
     const [currentSlide, setCurrentSlide] = useState(0);
     const [ latestSermon, setLatestSermon] = useState({})
     const [ isLoadingSermon, setIsLoadingSermon ] = useState(false)
@@ -133,12 +133,12 @@ export const Home  = () => {
                           <div className="flex flex-col w-full gap-3 p-3">
                               <div className="flex justify-between w-full items-center">
                                 <h4 className="font-bold">{latestSermon.title}</h4>
-                                <p className="smaller">{latestSermon.date}</p>
+                                <p className="text-sm">{latestSermon.date}</p>
                               </div>
 
                               <div className="flex justify-between w-full items-center">
-                              <p className="text-gray-800 small">By: {latestSermon.preacher}</p>                               
-                              <a href={latestSermon.link} className="bg-blue-900 text-white p-2 px-4 rounded-lg w-[150px] text-center small"> Listen</a>
+                              <p className="text-gray-800">By: {latestSermon.preacher}</p>                               
+                              <a href={latestSermon.link} className="bg-blue-900 text-white p-2 px-4 rounded-lg w-[150px] text-center text-sm"> Listen</a>
                               </div>
                               
                           </div>
@@ -153,7 +153,7 @@ export const Home  = () => {
                 <div className={`flex items-center gap-[50px] ${mediumScreen ? 'flex-wrap' : ''}`}>
                       <img src={Statements.mission.img} alt="" className="w-full lg:w-5/12"/>
 
-                    <div className="flex flex-col gap-2 small-lg w-full">
+                    <div className="flex flex-col gap-2 text-sm w-full">
                     <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8 mb-4">Our {Statements.mission.title}</h3>
 
                       {Statements.mission.texts.map((text, key) => (
@@ -196,10 +196,10 @@ export const Home  = () => {
                             <Link to={`article/${latestArticle.id}`}  className="flex flex-col w-full gap-3 p-3">
                                 <div className="flex justify-between w-full items-center">
                                   <h4 className="font-bold">{latestArticle.title}</h4>
-                                  <p className="smaller">{latestArticle.date}</p>
+                                  <p className="text-sm">{latestArticle.date}</p>
                                 </div>
                                 <div className="flex justify-between w-full items-center">
-                                <div className="bg-blue-900 text-white p-2 px-4 rounded-lg nderline small w-[150px] text-center">Read</div>
+                                <div className="bg-blue-900 text-white p-2 px-4 rounded-lg nderline text-sm w-[150px] text-center">Read</div>
                                 </div>
                                 
                             </Link>
@@ -211,7 +211,7 @@ export const Home  = () => {
               <div className={`flex flex-col gap-[10vh] w-11/12 lg:w-10/12 xl:w-9/12 items-center`}>            
 
                 <div className={`flex items-center justify-center gap-[50px]  ${mediumScreen ? 'flex-col-reverse' : ''}`}>
-                    <div className="flex flex-col gap-2 small-lg w-full">
+                    <div className="flex flex-col gap-2 text-sm w-full">
                     <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8 mb-4">Our {Statements.vision.title}</h3>
 
                       {Statements.vision.texts.map((text, key) => (
