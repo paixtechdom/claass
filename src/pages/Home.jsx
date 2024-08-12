@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 export const Home  = () => {
-  const { mediumScreen, dbLocation, setShowZoom, setImageSource, setCurrentNav } = useContext(AppContext)
+  const { dbLocation, setShowZoom, setImageSource, setCurrentNav } = useContext(AppContext)
     const [currentSlide, setCurrentSlide] = useState(0);
     const [ latestSermon, setLatestSermon] = useState({})
     const [ isLoadingSermon, setIsLoadingSermon ] = useState(false)
@@ -150,10 +150,10 @@ export const Home  = () => {
             <div className="flex my-9 py-[15vh] justify-center w-full ">
               <div className="flex flex-col gap-[10vh] w-11/12 lg:w-10/12 xl:w-9/12 items-center ">
 
-                <div className={`flex items-center gap-[50px] ${mediumScreen ? 'flex-wrap' : ''}`}>
+                <div className={`flex items-center gap-[50px] flex-col lg:flex-row`}>
                       <img src={Statements.mission.img} alt="" className="w-full lg:w-5/12"/>
 
-                    <div className="flex flex-col gap-2 text-sm w-full">
+                    <div className="flex flex-col gap-3 text-sm w-full">
                     <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8 mb-4">Our {Statements.mission.title}</h3>
 
                       {Statements.mission.texts.map((text, key) => (
@@ -210,7 +210,7 @@ export const Home  = () => {
             <div className="flex my-9 py-[15vh] justify-center w-full ">
               <div className={`flex flex-col gap-[10vh] w-11/12 lg:w-10/12 xl:w-9/12 items-center`}>            
 
-                <div className={`flex items-center justify-center gap-[50px]  ${mediumScreen ? 'flex-col-reverse' : ''}`}>
+                <div className={`flex items-center justify-center gap-[50px]  flex-col-reverse lg:flex-row`}>
                     <div className="flex flex-col gap-2 text-sm w-full">
                     <h3 className="text-2xl w-fit shadow-xl rounded-xl p-3 px-8 mb-4">Our {Statements.vision.title}</h3>
 
